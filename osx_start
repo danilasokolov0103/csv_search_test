@@ -11,4 +11,4 @@ xhost + $IP
 
 
 
-docker run -it  -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp/.X11-unix  28b542bb8774
+docker run -it  -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $pwd/:/app/import_files/  app

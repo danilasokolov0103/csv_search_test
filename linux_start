@@ -1,0 +1,6 @@
+#!/bin/bash
+# rsync using variables
+ 
+xhost +local:
+
+docker run -it  -e DISPLAY=$DISPLAY:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $pwd/:/app/import_files/  app
