@@ -4,7 +4,7 @@
 IP=$(ifconfig|grep -E inet.*broad|awk '{ print $2; }')
 
 
-#Find good port 
+
 p=0;for port in $(seq 0 10);do echo "Check :$((6000+$p)) (:$p)";  nc -w0 127.0.0.1 $((6000+$p)) && DISPLAY="$IP:$p"; let p=p+1;  done;
 
 xhost + $IP
