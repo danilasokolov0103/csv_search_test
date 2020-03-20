@@ -16,7 +16,9 @@ COPY . /app
 
 
 RUN pip install -r requirements.txt
-# Открываем порты
+
+
+
 EXPOSE 8000
 
 

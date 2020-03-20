@@ -1,8 +1,0 @@
-#!/bin/bash
-# rsync using variables
-
-
-ip="$(ifconfig | grep -A 1 'eth0' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)"
-
-
-docker run -it  -e DISPLAY=$ip:0 -v $pwd/:/app/import_files/  app
